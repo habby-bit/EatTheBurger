@@ -20,9 +20,13 @@ var orm = {
         });
     },
 
-    updateOne: function(tableInput, colToSearch, valOfCol, cb) {
-        var queryString = "UPDATE" + tableInput + " SET " + colToSearch + " WHERE " + valOfCol
-        connection.query(queryString, function(err, result) {
+    updateOne: function(tableInput, colToSearch, valOfCol, condition, cb) {
+        console.log('valOfCol:', valOfCol)
+        console.log('colToSearch:', colToSearch)
+        console.log('tableInput:', tableInput)
+        const theQueryString = `UPDATE ${tableInput} SET ${colToSearch} = ${valOfCol} WHERE ${condition}`
+        console.log('queryString:', theQueryString)
+        connection.query(theQueryString, function(err, result) {
             if (err) throw err;
             console.log(result);
             cb(result);
