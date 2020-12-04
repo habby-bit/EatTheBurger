@@ -8,15 +8,15 @@ var burger = {
         });
     },
 
-    insertOne: function(cb) {
-        orm.insertOne("burgers", colToSearch, valOfCol, function(res) {
+    insertOne: function(col1, col2, val1, val2, cb) {
+        orm.insertOne("burgers", col1, col2, val1, val2, function(res) {
             cb(res);
         });
     },
 
-    updateOne: function(tableToSearch, colToSearch, valOfCol, cb) {
-        orm.updateOne("burgers", tableToSearch, colToSearch, valOfCol, function(res) {
-            cb(res);
+    updateOne: function (colToSearch, valOfCol, condition, cb) {
+        orm.updateOne('burgers', colToSearch, valOfCol, condition, function (res) {
+          cb(res);
         });
     }
 };
