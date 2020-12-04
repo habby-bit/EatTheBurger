@@ -1,51 +1,57 @@
 <h1>Burgers!</h1>
 
+{{!-- Burgers that haven't been eaten yet --}}
 <div class = "notDevouredList" >
 
-<h2>Burgers that haven't been devoured</h2>
+  <h2>Burgers that haven't been devoured</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      <li>
-        {{this.burger_name}}
-      </li>
-      <button class = "devourbtn" data-id= {{this.id}} data-newDevour="{{devoured}}">
-        Devour!
-      </button>
-    {{/unless}}
-  {{/each}}
-</ul>
+    <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+          <li>
+            {{this.burger_name}}
+          </li>
+          <button class = "devourbtn" data-id= {{this.id}} data-newDevour="{{devoured}}">
+            Devour!
+          </button>
+        {{/unless}}
+      {{/each}}
+    </ul>
 
 </div>
+
+{{!-- Add a burger --}}
 
 <div class = "newBurger">
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+  <h2>Add a Burger</h2>
 
-  <div class="form-group">
-    <input type="text" id="brgr" name="name">
-  </div>
+    <form class="create-form">
 
-  <button type="submit">Add Burger</button>
-</form>
+      <div class="form-group">
+        <input type="text" id="brgr" name="name">
+      </div>
+
+      <button type="submit">Add Burger</button>
+    </form>
 
 </div>
 
+{{!-- Burgers that have been eaten --}}
+
 <div class = "devouredList">
 
-<h2>Burgers that have been devoured</h2>
+  <h2>Burgers that have been devoured</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      <li>
-        {{this.burger_name}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          <li>
+            {{this.burger_name}}
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
 
 </div>
 

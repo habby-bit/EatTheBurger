@@ -4,17 +4,26 @@ body {
     margin: auto;
 }
 
-h1 {
-    text-align: center;
-}
-
 button {
     margin-top: 5px;
     margin-bottom: 20px;
 }
 
+/* Styling for add a new burger section */
+
 .form-group {
     margin-bottom: 15px;
+}
+
+.newBurger {
+    float: left;
+    text-align: center;
+}
+
+/* Styling for each list */
+
+h1 {
+    text-align: center;
 }
 
 .devouredList {
@@ -33,9 +42,4 @@ button {
     margin-left: 10px;
     margin-right: 30px;
     padding: 10px;
-}
-
-.newBurger {
-    float: left;
-    text-align: center;
 }
