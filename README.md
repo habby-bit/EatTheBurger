@@ -19,13 +19,12 @@ Each burger in the waiting area also has a `Devour it!` button. When the user cl
 
 Below are some example images of the deployed app!
 
-<!-- ![NotesExample](./assets/img/)
-![NotesExample2](./assets/img/) -->
+![BurgerApp Example](public/assets/img/AppStills.png)
 
 ## App
 
 Here is a link to the deployed app on Heroku: 
-<!-- [Eat The Burger App](https://handy-note-taker.herokuapp.com/) -->
+[Eat The Burger App](https://easy-burger-eatery.herokuapp.com/)
 
 ## Questions?
 
